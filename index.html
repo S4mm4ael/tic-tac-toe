@@ -6,10 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/svg/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 <body>
- 
-    <script src="index.js"></script>    
+  <header class="header">
+    <div class="container header-container">
+      <img class="logo" src="assets/svg/logo.svg" alt="logo">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="#video" class="nav-link">Video</a></li>
+          <li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
+          <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="lang"><a href="#">en</a><span style="color:#ffffff;">/</span><a href="#">ru</a></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container main-container">
+      <section class="section-hero" id="hero">
+        <article>
+          <h1 class="name">Alexa Rise</h1>
+          <p class="about">Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise</p>
+          <a class="button" href="#">Hire me</a>
+        </article>
+
+      </section>
+      <section class="section skills" id="skills"></section>
+        <h2 class="section-title"></h2>
+      <section class="section portfolio" id="portfolio"></section>
+        <h2 class="section-title"></h2>
+      <section class="section video" id="video"></section>
+        <h2 class="section-title"></h2>
+      <section class="section price" id="price"></section>
+        <h2 class="section-title"></h2>
+      <section class="section contacts" id="contacts"></section>
+        <h2 class="section-title"></h2>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer-container"></div>
+  </footer>
+  <script src="index.js"></script>
 </body>
 </html>
+
