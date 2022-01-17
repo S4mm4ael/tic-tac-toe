@@ -91,15 +91,22 @@ h3{
     contrast(87%);
 }
 .lang{
-  margin: auto 20px auto 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
 }
-
+.lang p{
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .section-hero{
   padding-top: 160px;
   padding-left: 80px;
   margin: 0 -20px 0 -20px;
   height: 820px;
-  
   background-image: url('assets/jpg/bg.jpg');
   background-position: center -90px;
   background-repeat: no-repeat;
@@ -123,15 +130,22 @@ h3{
   cursor: pointer;
   font-family: inherit;
   font-size: 20px;
+  transition: 0.3s;
 }
 .button-solid{
   background-color: #bdae82;
   color: #000000;
 }
+.button-solid:hover{
+  color: #ffffff;
+}
 .button-transparent{
   border: 1px solid #bdae82;
   background-color: #000000 ;
   color: #bdae82;
+}
+.button-transparent:hover{
+  color: #ffffff;
 }
 .section-title{
   width: 50%;
@@ -217,6 +231,11 @@ h3{
   cursor: pointer;
   background-color: transparent;
   background-image: url(assets/svg/Play_hover.svg);
+  transition: 0.3s;
+}
+.video-button:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+  contrast(87%);
 }
 .price-cards{
   display: flex;
@@ -356,4 +375,30 @@ input:-webkit-autofill:active {
 .social-list a, .social-logo{
   height: 32px;
   width: 32px;
+}
+
+.form_toggle {
+	display: flex;
+	overflow: hidden;
+}
+.form_toggle-item {
+	display: inline-block;
+}
+.form_toggle-item input[type=radio] {
+	display: none;
+}
+.form_toggle-item label {
+	display: inline-block;
+	line-height: 50px;    
+	border: none;
+	cursor: pointer;
+	user-select: none;   
+}
+ 
+/* Checked */
+.form_toggle .item-1 input[type=radio]:checked + label {
+	color: #bdae82;
+}
+.form_toggle .item-2 input[type=radio]:checked + label {
+	color: #bdae82;
 }
