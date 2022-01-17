@@ -45,6 +45,7 @@ h2{
 }
 h3{
   margin-top: 100px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
 }
@@ -70,18 +71,15 @@ h3{
   align-items: center;
   height: 50px;
   width: 500px;
-  padding-left: 30px;
   padding-right: 30px;
 }
 .nav-item{
   margin-left: 15px;
-  margin-right: 15px;
-}
-.nav-item:first-child{
-  margin-left: 0;
+  margin-right: 10px;
 }
 .logo{
   margin: 20px;
+  margin-left: 0;
   height: 50px;
   width: 50px;
   transition: 0.3s;
@@ -119,7 +117,8 @@ h3{
   display: block;
   height: 120px;
   width: 470px;
-  margin-bottom: 25px;
+  padding-top: 10px;
+  margin-bottom: 35px;
 }
 .button {
   display: block;
@@ -161,9 +160,9 @@ h3{
   justify-content: space-between;
   flex-wrap: wrap;
   height: 242px;
+  gap: 30px;
 }
 .skill-item{
-  margin: 0 20px 0px 20px;
   padding-bottom: 8px;
   height: 240px;
   width: 320px;
@@ -181,11 +180,11 @@ h3{
 }
 .skill-item:nth-child(3) {
   background-image: url('./assets/svg/image\ 1.svg');
-  background-size: 62px 50px;
+  background-size: 62px 60px;
 }
 .skill-item:nth-child(4) {
   background-image: url('./assets/svg/mic\ 1.svg');
-  background-size: 62px 50px;
+  background-size: 62px 60px;
 }
 .skill-text{
   display: block;
@@ -389,12 +388,12 @@ input:-webkit-autofill:active {
 }
 .form_toggle-item label {
 	display: inline-block;
-	line-height: 50px;    
+	line-height: 50px;
 	border: none;
 	cursor: pointer;
-	user-select: none;   
+	user-select: none;
 }
- 
+
 /* Checked */
 .form_toggle .item-1 input[type=radio]:checked + label {
 	color: #bdae82;
