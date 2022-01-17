@@ -179,6 +179,8 @@ h3{
   background-size: 62px 50px;
 }
 .skill-item:nth-child(3) {
+  margin-top: -5px;
+  margin-left: 8px;
   background-image: url('./assets/svg/image\ 1.svg');
   background-size: 62px 60px;
 }
@@ -195,9 +197,7 @@ h3{
   line-height: 36px;
   text-align: center;
 }
-.section-portfolio{
-  padding: 0 20px 0 20px;
-}
+
 .button-group{
   display: flex;
   justify-content: center;
@@ -251,6 +251,7 @@ h3{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 40px;
   height: 505px;
   width: 450px;
   border: 1px solid #bdae82;
@@ -260,14 +261,13 @@ h3{
   text-align: center;
 }
 .price-title{
-  margin-top: 43px;
-  margin-bottom: 20px;
   font-family: 'Merriweather', serif;
   font-weight: 700;
   font-size: 28px;
   line-height: 56px;
 }
 .price-value{
+  margin-top: 30px;
   margin-bottom: 20px;
   font-family: 'Merriweather', serif;
   font-weight: 700;
@@ -278,14 +278,16 @@ h3{
   font-size: 18px;
   line-height: 36px;
 }
-.button-price{
-  margin-top: 40px;
+.price-text{
+  height: 200px;
   margin-bottom: 20px;
+}
+.button-price{
   padding: 0;
 }
 .contacts-container{
   margin: 100px -20px 0 -20px;
-  padding: 60px 20px 195px 970px;
+  padding: 80px 20px 195px 970px;
   background: url('./assets/jpg/contacts.jpg');
   background-size: auto 700px;
   background-position: center center;
@@ -294,13 +296,16 @@ h3{
   display: block;
   width: 450px;
 }
+.contacts-item{
+margin-top: 53px;
+}
+
 .contacts-area{
   height: 445px;
   width: 450px;
 }
 .section-title-contacts{
   padding: 0;
-  margin: 0 0 40px 0px;
   background-color: transparent;
 }
 .email, .tel, .message{
@@ -325,7 +330,7 @@ h3{
 }
 .message{
   height: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   resize: none;
   overflow: auto;
   }
@@ -364,18 +369,19 @@ input:-webkit-autofill:active {
   justify-content: center;
   align-items: center;
   list-style: none;
+  margin-top: 10px;
   gap: 20px;
 }
 .rss-social{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 20px;
 }
 .social-list a, .social-logo{
   height: 32px;
   width: 32px;
 }
-
 .form_toggle {
 	display: flex;
 	overflow: hidden;
@@ -393,8 +399,6 @@ input:-webkit-autofill:active {
 	cursor: pointer;
 	user-select: none;
 }
-
-/* Checked */
 .form_toggle .item-1 input[type=radio]:checked + label {
 	color: #bdae82;
 }

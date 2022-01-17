@@ -30,13 +30,14 @@
             <input id="fid-1" type="radio" name="radio" value="off" checked>
             <label for="fid-1">en</label>
           </div>
-          <p>&nbsp/&nbsp</p>
+          <p>&nbsp;/&nbsp;</p>
           <div class="form_toggle-item item-2">
             <input id="fid-2" type="radio" name="radio" value="on">
             <label for="fid-2">ru</label>
           </div>
         </div>
       </div>
+    </div>
   </header>
   <main class="main">
     <div class="container main-container">
@@ -86,15 +87,15 @@
           <div class = "photo-item"><img  src="assets/jpg/portfolio-img-4.jpg" alt="photo 6"></div>
         </div>
       </section>
-      <section class="section section-video" id="video"></section>
+      <section class="section section-video" id="video">
         <div class="section-title"><h2>Video</h2></div>
         <div class="video-player">
           <img src="assets/jpg/video-player.jpg" alt="video-player">
           <button class="video-button"></button>
         </div>
       </section>
-        <section class="section section-price" id="price">
-          <div class="section-title"><h2>Price</h2></div>
+      <section class="section section-price" id="price">
+        <div class="section-title"><h2>Price</h2></div>
           <div class="price-cards">
             <div class="price-card">
               <h4 class="price-title">Standart</h4>
@@ -105,22 +106,22 @@
                 <span class="price-text-span">12 photos in retouch</span>
                 <span class="price-text-span">Readliness 2-3 weeks</span>
                 <span class="price-text-span">Make up, visage</span>
-                <button class="button button-solid button-price">Order shooting</button>
-              </div>
             </div>
-            <div class="price-card">
-              <h4 class="price-title">Premium</h4>
-              <div class="price-value">700 $</div>
-              <div class="price-text">
-                <span class="price-text-span">One or two locations</span>
-                <span class="price-text-span">200 photos in color</span>
-                <span class="price-text-span">20 photos in retouch</span>
-                <span class="price-text-span">Readiness 1-2 weeks</span>
-                <span class="price-text-span">Make up, visage</span>
-                <button class="button button-solid button-price">Order shooting</button>
-              </div>
+            <button class="button button-solid button-price">Order shooting</button>
+          </div>
+          <div class="price-card">
+            <h4 class="price-title">Premium</h4>
+            <div class="price-value">700 $</div>
+            <div class="price-text">
+              <span class="price-text-span">One or two locations</span>
+              <span class="price-text-span">200 photos in color</span>
+              <span class="price-text-span">20 photos in retouch</span>
+              <span class="price-text-span">Readiness 1-2 weeks</span>
+              <span class="price-text-span">Make up, visage</span>
             </div>
-            <div class="price-card">
+              <button class="button button-solid button-price">Order shooting</button>
+          </div>
+          <div class="price-card">
               <h4 class="price-title">Gold</h4>
               <div class="price-value">1000 $</div>
               <div class="price-text">
@@ -129,22 +130,20 @@
                 <span class="price-text-span">50 photos in retouch</span>
                 <span class="price-text-span">Readiness 1 week</span>
                 <span class="price-text-span">Make up, visage, hairstyle</span>
-                <button class="button button-solid button-price">Order shooting</button>
               </div>
-            </div>
+              <button class="button button-solid button-price">Order shooting</button>
           </div>
-        </section>
-
+        </div>
+      </section>
       <section class="section section-contacts" id="contacts">
         <div class="contacts-container">
           <h2 class="section-title-contacts">Contact me</h2>
-          <p><input class ="email" type="email" placeholder="E-mail"></p>
+          <p class="contacts-item"><input class ="email" type="email" placeholder="E-mail"></p>
           <p><input class ="tel" type="tel" placeholder="Phone"></p>
           <textarea class="message" name="message" placeholder="Message"></textarea>
           <button class="button button-solid button-price">Send message</button>
         </div>
       </section>
-
     </div>
   </main>
   <footer class="footer">
@@ -155,12 +154,12 @@
       <p><a href="https://github.com/S4mm4ael">github</a></p>
     </div>
       <a class="rss-social" href="https://rs.school/js-stage0/">Rolling Scopes School</a>
-      <div class="social-list">
-        <a href="#"><img class="social-logo" src="assets/svg/inst 1.svg" alt="instagram"></a>
-        <a href="#"><img class="social-logo" src="assets/svg/fb 1.svg"  alt="facebook"></a>
-        <a href="#"><img class="social-logo"  src="assets/svg/tw 1.svg" alt="twitter"></a>
-        <a href="#"><img class="social-logo" src="assets/svg/pinterest 1.svg" alt="github"></a>
-      </div>
+      <ul class="social-list">
+        <li><a href="#"><img class="social-logo" src="assets/svg/inst_1.svg" alt="instagram"></a></li>
+        <li><a href="#"><img class="social-logo" src="assets/svg/fb_1.svg"  alt="facebook"></a></li>
+        <li><a href="#"><img class="social-logo"  src="assets/svg/tw_1.svg" alt="twitter"></a></li>
+        <li><a href="#"><img class="social-logo" src="assets/svg/pinterest_1.svg" alt="pinterest"></a></li>
+      </ul>
     </div>
   </footer>
   <script src="index.js"></script>
