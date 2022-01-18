@@ -20,8 +20,9 @@ body{
 a{
   text-decoration: none;
   color: #ffffff;
+  transition: 0.3s;
 }
-a:visited{
+a:visited, a:hover{
   color: #bdae82;
 }
 ul{
@@ -83,6 +84,7 @@ h3{
   height: 50px;
   width: 50px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .logo:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
