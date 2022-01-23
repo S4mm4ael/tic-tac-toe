@@ -9,6 +9,7 @@
 :root{
   --font1: 32px;
   --font2: 32px;
+  --font3: 20px;
   }
 }
 html {
@@ -78,7 +79,9 @@ h3{
 }
 @media (max-width: 768px) {
   h3 {
-    margin-top: 80px;
+    font-size: var(--font3);
+    margin-top: 90px;
+    margin-bottom: 25px;
  }
 }
 .container {
@@ -91,6 +94,7 @@ h3{
   .container {
     width: 768px;
     padding: 0;
+    overflow-x: hidden;
   }
 }
 @media (max-width: 768px) {
@@ -106,11 +110,7 @@ h3{
   background-repeat: no-repeat;
   background-position: center 0;
 }
-@media (max-width: 768px) {
-  .header-container {
-    
-  }
-}
+
 @media (max-width: 768px) {
   .header-container {
     justify-content: flex-end;
@@ -118,6 +118,7 @@ h3{
     gap: 20px;
     background: url('assets/jpg/bg-tablet.jpg');
   }
+ 
 }
 .nav{
   margin-left: auto;
@@ -183,9 +184,15 @@ h3{
     height: 500px;
     background-image: url('assets/jpg/bg-tablet.jpg');
   }
+  .lang p{
+    font-weight: 800;
+    font-style: bold;
+  }
+  .slash{
+    display: block;
+    margin-right: 20px;
+  }
 }
-
-
 .section-hero .about{
   display: block;
   height: 120px;
@@ -198,10 +205,10 @@ h3{
   .section-hero .about{
     height: 72px;
     width: 390px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-bottom: 70px;
   }
 }
-
 
 .button {
   display: block;
@@ -267,7 +274,16 @@ h3{
     height: 520px;
     width: 768px;
     flex-direction: row;
-    gap: 0;
+    margin-bottom: 95px;
+    padding: 10px 55px 20px 50px;
+    gap: 0
+   }
+   .skill-item{
+    height: 240px;
+    width: 320px;
+    padding: 0 20px 8px 20px;
+    background-position: center top;
+    background-repeat: no-repeat;
    }
 }
 
@@ -308,6 +324,19 @@ h3{
   .skill-text {
     height: 44px;
     line-height: 22px;
+  }
+  .skill-item:nth-child(3) {
+    padding-top: 3px;
+    padding-right: 35px;
+    margin-top: 17px;
+    margin-right: 0px;
+    background-image: url('./assets/svg/image\ 1.svg');
+    background-size: 65px 65px;
+  }
+  .skill-item:nth-child(4) {
+    margin-top: 20px;
+    background-image: url('./assets/svg/mic\ 1.svg');
+    background-size: 62px 60px;
   }
 }
 
@@ -472,11 +501,18 @@ h3{
 @media (max-width: 768px) {
   .contacts-container{
     padding: 60px 159px 60px 159px;
+    background: url('/s4mm4ael-JSFEPRESCHOOL/portfolio/assets/jpg/contacts-tablet.jpg');
+    background-repeat: no-repeat;
+    margin: 0;
   }
   .button-contacts{
-    
+    display: block;
+    margin: 0 auto;
   }
- 
+  .section-title-contacts{
+    display: block;
+    text-align: center;
+  }
  }
 
 .contacts-container p{
@@ -485,10 +521,14 @@ h3{
 }
 .contacts-item{
   margin-top: 53px;
+  background-color: var(--color-black);
+  opacity: 0.6;
 }
 .contacts-area{
   height: 445px;
   width: 450px;
+  background-color: var(--color-black);
+  opacity: 0.6;
 }
 .section-title-contacts{
   padding: 0;
@@ -501,7 +541,8 @@ h3{
   font-size: 20px;
   font-weight: 400;
   line-height: 40px;
-  background-color: transparent;
+  background-color: var(--color-black);
+  opacity: 0.6;
   border: 1px solid var(--color-gold);
   color: var(--color-gold);
 }
@@ -542,6 +583,15 @@ input:-webkit-autofill:active {
   justify-content: space-between;
   height: 150px;
   padding: 0 20px 0 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-container{
+    margin-top: 28px;
+    margin-bottom: 28px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .footer-left{
   display: flex;
