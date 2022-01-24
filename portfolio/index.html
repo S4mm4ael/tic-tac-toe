@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <title>Portfolio</title>
 </head>
+
 <body>
   <header class="header">
     <div class="container header-container">
@@ -37,20 +38,17 @@
           </div>
         </div>
       </div>
-      
-      <div class="hamburger-menu">
-        <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
-          <span></span>
-        </label>
-    
-        <ul class="menu__box">
-          <li><a class="menu__item" href="#">Главная</a></li>
-          <li><a class="menu__item" href="#">Проекты</a></li>
-          <li><a class="menu__item" href="#">Команда</a></li>
-          <li><a class="menu__item" href="#">Блог</a></li>
-          <li><a class="menu__item" href="#">Контакты</a></li>
-        </ul>
+      <div class="hamburger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+      <div class="menubox">
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#video" class="nav-link">Video</a>
+          <a href="#price" class="nav-link">Price</a>
+          <a href="#contacts" class="nav-link">Contacts</a>
       </div>
     </div>
   </header>
@@ -105,12 +103,12 @@
       <section class="section section-video" id="video">
         <div class="section-title"><h2>Video</h2></div>
         <div class="video-player">
-          <img class="video-player-image" src="assets/jpg/video-player.jpg" alt="video-player">
+          <img class="video-player-image" src="/s4mm4ael-JSFEPRESCHOOL/portfolio/assets/jpg/video-player.jpg" alt="video-player">
           <button class="video-button"></button>
         </div>
       </section>
       <section class="section section-price" id="price">
-        <div class="section-title"><h2>Price</h2></div>
+        <div class="section-title section-title-price"><h2>Price</h2></div>
           <div class="price-cards">
             <div class="price-card">
               <h4 class="price-title">Standart</h4>
@@ -177,7 +175,7 @@
       </ul>
     </div>
   </footer>
-  <script src="index.js"></script>
+  <script src="/s4mm4ael-JSFEPRESCHOOL/portfolio/index.js"></script>
 </body>
 </html>
 
