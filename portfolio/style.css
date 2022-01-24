@@ -739,6 +739,7 @@ input:-webkit-autofill:active {
 }
 /*hamburger */
 .menubox{
+  display: none;
   overflow-x: hidden;
 }
 @media (max-width: 768px) {
