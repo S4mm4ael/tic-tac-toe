@@ -1,4 +1,4 @@
-console.log("110 баллов: Все пункты выполнены полностью");
+console.log("Ваша отметка - 82 балла");
 
 const hamburger = document.querySelector('.hamburger');
 const menubox = document.querySelector('.menubox');

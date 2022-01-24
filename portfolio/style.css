@@ -190,7 +190,6 @@ h3{
     margin-right: 20px;
   }
 }
-
 @media (max-width: 620px) {
   .section-hero{
     padding: 10px;  
@@ -204,10 +203,7 @@ h3{
     padding-left: 20px;
     max-width: 320px;
   }
-
 }
-
-
 .section-hero .about{
   display: block;
   height: 120px;
@@ -215,7 +211,6 @@ h3{
   padding-top: 10px;
   margin-bottom: 35px;
 }
-
 @media (max-width: 768px) {
   .section-hero .about{
     height: 72px;
@@ -783,7 +778,6 @@ input:-webkit-autofill:active {
   }
   .menubox.open{
     visibility: visible;
-    
     display: flex;
     z-index: 1;
     flex-direction: column;
@@ -803,5 +797,12 @@ input:-webkit-autofill:active {
     margin-bottom: 20px;
     color: var(--color-white);
     transition: 0.3s;
+  }
+}
+
+@media (max-width: 620px) {
+  .menubox.open{
+    padding-left: 700px;
+    padding-right: 30px;
   }
 }
