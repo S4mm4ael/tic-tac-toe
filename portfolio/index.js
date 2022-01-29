@@ -18,3 +18,31 @@ function closeMenu(event) {
 
 hamburger.addEventListener('click', toggleMenu);
 menubox.addEventListener('click', closeMenu);
+
+// Image season change in portfolio
+
+const portfolioBtn = document.querySelector('.portfolio-btn');
+const portfolioImages = document.querySelectorAll('.portfolio-image');
+const portfolioSwitcher = document.querySelector('.button-group')
+
+function changeEvent(event) {
+  if(event.target.classList.contains('portfolio-btn')) {
+    portfolioImages.forEach((img, index) => img.src = `assets/jpg/${event.target.dataset.season}/${index + 1}.jpg`);
+  }
+}
+
+portfolioSwitcher.addEventListener('click', changeEvent);
+
+// Active button
+
+const btns = document.querySelectorAll('.portfolio-btn');
+
+btns.forEach( button => {
+  button.addEventListener('click', function() {
+      btns.forEach( oldButton => {
+      oldButton.classList.remove('active');
+    });
+    
+    this.classList.add('active');
+  })
+})

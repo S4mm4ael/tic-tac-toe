@@ -245,6 +245,10 @@ h3{
 .button-transparent:active{
   background-color: var(--color-gold);
 }
+.active{
+  background-color: var(--color-gold);
+  color: var(--color-black);
+}
 .button-transparent:hover{
   color: var(--color-white);
 }
