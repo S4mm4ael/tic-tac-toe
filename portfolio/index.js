@@ -102,7 +102,7 @@ navLinkEn.addEventListener('click', () => {
 
 
 // My mark //
-console.log("Ваша отметка - 82 балла");
+console.log("Ваша отметка - 80 баллов");
 // Hamburger menu //
 
 const hamburger = document.querySelector('.hamburger');
