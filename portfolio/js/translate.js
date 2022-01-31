@@ -1,5 +1,3 @@
-// Translate
-
 const i18Obj = {
   'en': {
     'skills': 'Skills',
@@ -14,7 +12,7 @@ const i18Obj = {
     'skill-text-1': 'High-quality photos in the studio and on the nature',
     'skill-title-2': 'Video shooting',
     'skill-text-2': 'Capture your moments so that they always stay with you',
-    'skill-title-3': 'Retouch',
+    'skill-title-3': 'Rotouch',
     'skill-text-3': 'I strive to make photography surpass reality',
     'skill-title-4': 'Audio',
     'skill-text-4': 'Professional sounds recording for video, advertising, portfolio',
@@ -82,96 +80,4 @@ const i18Obj = {
     'send-message': 'Отправить'
   }
 }
-
-const navLinkEn = document.querySelector('.en');
-const navLinkRus = document.querySelector('.ru');
-
-function getTranslate (lang) {
-  const translateData = document.querySelectorAll('[data-i18]');
-  translateData.forEach((el) => {
-  el.textContent = i18Obj[lang][el.dataset.i18] 
-  });
-}
-
-navLinkRus.addEventListener('click', () => {
-  getTranslate('ru');
-})
-navLinkEn.addEventListener('click', () => {
-  getTranslate('en');
-})
-
-
-// My mark //
-console.log("Ваша отметка - 80 баллов");
-// Hamburger menu //
-
-const hamburger = document.querySelector('.hamburger');
-const menubox = document.querySelector('.menubox');
-
-function toggleMenu() {
-  hamburger.classList.toggle('open');
-  menubox.classList.toggle('open');
-}
-
-function closeMenu(event) {
-  if (event.target.classList.contains('nav-link')) {
-  hamburger.classList.remove('open');
-  menubox.classList.remove('open');
-  }
-}
-
-hamburger.addEventListener('click', toggleMenu);
-menubox.addEventListener('click', closeMenu);
-
-// Image season change in portfolio
-
-const portfolioBtn = document.querySelector('.portfolio-btn');
-const portfolioPic = document.querySelectorAll('.portfolio-image');
-const portfolioChanger = document.querySelector('.button-group')
-
-function changePics(event) {
-  if(event.target.classList.contains('portfolio-btn')) {
-    portfolioPic.forEach((img, index) => img.src = `assets/jpg/${event.target.dataset.season}/${index + 1}.jpg`);
-  }
-}
-
-portfolioChanger.addEventListener('click', changePics);
-
-// Active button
-
-const btns = document.querySelectorAll('.portfolio-btn');
-
-btns.forEach( button => {
-  button.addEventListener('click', function() {
-      btns.forEach( oldButton => {
-      oldButton.classList.remove('active');
-    });
-    this.classList.add('active');
-  })
-})
-
-// Theme change
-
-const themeLink = document.querySelector('.theme-logo');
-
-function changeTheme (event) {
-  if (event.target.classList.contains('theme-black')){
-    themeLink.classList.remove('theme-black');
-    document.documentElement.style.setProperty('--background-color', '#fff');
-    document.documentElement.style.setProperty('--text-color', '#000');
-    document.documentElement.style.setProperty('--hover-color', '#000');
-    document.documentElement.style.setProperty('--line-color', '#000');
-    themeLink.src = "assets/svg/carbon_sun.svg";
-
- }
-  else {
-    themeLink.classList.add('theme-black');
-    document.documentElement.style.setProperty('--background-color', '#000');
-    document.documentElement.style.setProperty('--text-color', '#fff');
-    document.documentElement.style.setProperty('--hover-color', '#fff');
-    document.documentElement.style.setProperty('--line-color', '#bdae82');
-    themeLink.src = "assets/svg/carbon_moon.svg";
-  }
-};
-
-themeLink.addEventListener('click', changeTheme);
+export default i18Obj;
