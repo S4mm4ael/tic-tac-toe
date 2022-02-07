@@ -5,6 +5,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
  }
  body{
   display: flex;
@@ -13,7 +14,7 @@ html {
   min-width: 320px;
   background-color: #000;
   font-family: 'Signika Negative', sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 40px;
   color: #fff;
@@ -38,9 +39,11 @@ a:hover, a:active{
   align-items: center;
   min-height: 280px;
   height: calc(100vh - 200px) ;
-  background-image: url(/s4mm4ael-JSFEPRESCHOOL/eco-sounds/assets/img/tokyo_1.jpg);
+  background-image: url(./assets/img/1.jpg);
+  background-size: cover;
   background-position: center -100px;
   background-repeat: no-repeat;
+  transition: 0.4s;
 }
 .button{
   width: 160px;
@@ -48,20 +51,24 @@ a:hover, a:active{
   background-image: url(./assets/svg/play.svg);
   background-size: contain;
   background-color: transparent;
+  filter: invert(100%);
+  cursor: pointer;
   border: 0;
   transition: 0.3s;
 
 }
-.button:hover, .button:active{
-  filter: invert(100%);
+.button:hover, .active{
+  filter: invert(42%) sepia(30%) saturate(2915%) hue-rotate(162deg) brightness(101%) contrast(105%);
 }
 
 .header{
-  background-image: url(/s4mm4ael-JSFEPRESCHOOL/eco-sounds/assets/img/tokyo_1.jpg);
+  background-image: url(./assets/img/1.jpg);
   background-repeat: no-repeat;
   background-position: center 0;
+  background-size: cover;
   overflow-x: hidden;
   width: 100%;
+  transition: 0.4s;
 }
 .header-container{
   position: relative;
@@ -88,10 +95,10 @@ a:hover, a:active{
   flex-wrap: wrap;
   align-items: center;
   gap: 30px;
-  font-size: 30px;
 }
 .nav-item:hover{
   cursor: pointer;
+  
 }
 .footer-container{
   display: flex;
@@ -118,8 +125,12 @@ a:hover, a:active{
   filter: invert(26%)  saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 .social-logo{
+  height: 50px;
+  width: 50px;
   transition: 0.3s;
 }
-.social-logo:hover{
+.social-logo:hover, .social-logo:active{
   filter: invert(26%)  saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
+
+
