@@ -1,5 +1,5 @@
 // My mark //
-console.log("Ваша отметка - 80 баллов");
+console.log("Ваша отметка - 70 баллов");
 
 // Active button
 
