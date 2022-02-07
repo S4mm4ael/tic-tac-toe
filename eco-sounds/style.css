@@ -1,3 +1,11 @@
+:root {
+  --font1: 24px;
+}
+@media (max-width: 768px) {
+:root{
+  --font1: 18px;
+}
+}
 html {
   scroll-behavior: smooth;
 }
@@ -5,7 +13,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
  }
  body{
   display: flex;
@@ -14,7 +22,7 @@ html {
   min-width: 320px;
   background-color: #000;
   font-family: 'Signika Negative', sans-serif;
-  font-size: 30px;
+  font-size: var(--font1);
   font-weight: 400;
   line-height: 40px;
   color: #fff;
@@ -54,10 +62,11 @@ a:hover, a:active{
   filter: invert(100%);
   cursor: pointer;
   border: 0;
-  transition: 0.3s;
+  transition: 0.6s;
 
 }
 .button:hover, .active{
+  transition: 0.6s;
   filter: invert(42%) sepia(30%) saturate(2915%) hue-rotate(162deg) brightness(101%) contrast(105%);
 }
 
@@ -81,9 +90,9 @@ a:hover, a:active{
   opacity: 0.7;
 }
 .logo{
-  height: 100px;
-  width: 100px;
-  filter: invert(100%);
+  height: 80px;
+  width: 80px;
+  filter: brightness(1000%);
 }
 .nav{
   margin-left: auto;
@@ -98,14 +107,14 @@ a:hover, a:active{
 }
 .nav-item:hover{
   cursor: pointer;
-  
 }
+
 .footer-container{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 100px;
+  max-height: 100px;
   padding: 20px;
 }
 .social-list{
@@ -132,5 +141,29 @@ a:hover, a:active{
 .social-logo:hover, .social-logo:active{
   filter: invert(26%)  saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
-
-
+.credits{
+  line-height: 16px;
+  font-size: 8px;
+  margin-left: 20px;
+}
+@media (max-width: 620px) {
+  .social-logo{
+    height: 25px;
+    width: 25px;
+  }
+  .footer-container{
+    height: 50px;
+    margin-top: -50px;
+  }
+  .button{
+    margin-top: -50px;
+    height: 50px;
+    width: 50px;
+  }
+  .header-container{
+    opacity: 1;
+  }
+  .credits{
+    visibility: hidden;
+  }
+}

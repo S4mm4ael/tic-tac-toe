@@ -13,11 +13,14 @@ const audio = document.querySelector('audio');
 function playAudio() {
   if (play.classList.contains("active")) {
     audio.pause();
+    play.style.backgroundImage = 'url("./assets/svg/play.svg")';
+
   }
   else {
     audio.currentTime = 0;
     audio.play();
-  }  
+    play.style.backgroundImage = 'url("./assets/svg/pause.png")';
+  }
 }
 
 play.addEventListener('click', playAudio);
@@ -31,7 +34,7 @@ btns.forEach( button => {
   })
 })
 
-play.addEventListener('click', function changeColor(event) { this.classList.toggle('active')});  
+play.addEventListener('click', function changeColor(event) { this.classList.toggle('active')});
 
 // Picture and sound change
 
@@ -41,7 +44,7 @@ const backgroundChanger = document.querySelector('.nav-list');
 function changePic (event) {
   if(event.target.classList.contains('btn')) {
   for (i=0; i<background.length; i++){
-    background[i].style.backgroundImage = `url('./assets/img/${event.target.dataset.background}.jpg')`; 
+    background[i].style.backgroundImage = `url('./assets/img/${event.target.dataset.background}.jpg')`;
   }
   audio.src=`./assets/audio/${event.target.dataset.background}.mp3`
   }
