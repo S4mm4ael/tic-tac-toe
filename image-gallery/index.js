@@ -15,7 +15,7 @@ getData = () => {
 
   containerMain.textContent = "";
 
-  const url = 'https://api.unsplash.com/search/photos?query='+input.value+'&per_page=30&client_id=DX_-ML2Wl0JwfJns4MYjEF6uzgfGpqOpKVmJFwb7c04';
+  const url = 'https://api.unsplash.com/search/photos?query='+input.value+'&per_page=28&client_id=DX_-ML2Wl0JwfJns4MYjEF6uzgfGpqOpKVmJFwb7c04';
 
   fetch(url)
 
