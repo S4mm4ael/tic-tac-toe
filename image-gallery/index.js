@@ -1,3 +1,7 @@
+// My mark //
+console.log("Ваша отметка - 60 баллов");
+
+//API//
 const input = document.querySelector('.search-term');
 const btn = document.querySelector(".search-button");
 const containerMain = document.querySelector(".main-container");
@@ -40,3 +44,8 @@ loadImages = (data) => {
   }
 }
 
+// Clear search //
+
+document.querySelector(".close").addEventListener("click", () => {
+  input.value = "";
+} )
