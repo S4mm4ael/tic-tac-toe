@@ -6,7 +6,6 @@
 }
 @media (max-width: 768px) {
 :root{
-  --font1: 24px;
   --font2: 16px;
 }
 }
@@ -37,6 +36,14 @@ html {
   font-size: var(--font1);
   margin-right: auto;
   margin-left: 20px;
+  min-width: 300px;
+}
+@media (max-width:700px){
+  .h2{
+    min-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 a{
   text-decoration: none;
@@ -87,6 +94,7 @@ a:hover, a:active{
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .logo{
@@ -98,7 +106,7 @@ a:hover, a:active{
   position: relative;
   display: flex;
   justify-content: center;
-  width: calc(30%);
+  min-width: 20%;
 }
 
 .search-term {
@@ -201,3 +209,4 @@ a:hover, a:active{
 .close:after {
   transform: rotate(-45deg);
 }
+
