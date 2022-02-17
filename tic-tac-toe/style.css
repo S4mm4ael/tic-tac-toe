@@ -67,7 +67,7 @@ table tr td:last-child{
 }
 
 .modal {
-  visibility: hidden;
+  display: none;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -79,7 +79,7 @@ table tr td:last-child{
   align-items: center;
   justify-content: center;
   background: rgba(77, 77, 77, .7);
-  transition: all .4s;
+  transition: 0.3s;
 }
 
 .modal:target {
@@ -98,12 +98,6 @@ table tr td:last-child{
 
 .modal__footer {
   text-align: right;
-  a {
-    color: #585858;
-  }
-  i {
-    color: #d02d2c;
-  }
 }
 .modal__close {
   position: absolute;
