@@ -18,50 +18,44 @@
     </div>
   </header>
   <main>
-    <div class="container main-container">
-      <table>
-        <tr>
-          <td class="cell" id="0"></td>
-          <td class="cell" id="1"></td>
-          <td class="cell" id="2"></td>
-        </tr>
-        <tr>
-          <td class="cell" id="3"></td>
-          <td class="cell" id="4"></td>
-          <td class="cell" id="5"></td>
-        </tr>
-        <tr>
-          <td class="cell" id="6"></td>
-          <td class="cell" id="7"></td>
-          <td class="cell" id="8"></td>
-        </tr>
-      </table>
-
-    <button onClick="startGame()">Replay</button>
-
-    <div class="modal"> 
-      <div class="modal__content">
-        <h1>CSS Only Modal</h1>
-
-        <p>
-            You can use the :target pseudo-class to create a modals with Zero JavaScript. Enjoy!
-        </p>
-
-        <div class="modal__footer">
-            ffff
-        </div>
-
-        <a href="#" class="modal__close">&times;</a>
+    <div class="container game-container">
+      <div class="game-field">
+        <table>
+          <tr>
+            <td class="cell" data-cell-index="0"></td>
+            <td class="cell" data-cell-index="1"></td>
+            <td class="cell" data-cell-index="2"></td>
+          </tr>
+          <tr>
+            <td class="cell" data-cell-index="3"></td>
+            <td class="cell" data-cell-index="4"></td>
+            <td class="cell" data-cell-index="5"></td>
+          </tr>
+          <tr>
+            <td class="cell" data-cell-index="6"></td>
+            <td class="cell" data-cell-index="7"></td>
+            <td class="cell" data-cell-index="8"></td>
+          </tr>
+        </table>
       </div>
+     
+      <div class="game-status"></div>
+      <div class="turn-number"></div>
+      <button class="button button-solid game-restart">Replay</button>
+      <h2 class="winners-list"> Winners </h2>
+      <div class="winners">
+        
+        
       </div>
-
-
-
-
+    
     </div>
   </main>
   <footer>
-    <div class=" container footer-container"></div>
+    <div class=" container footer-container">
+     
+
+
+    </div>
   </footer>
   
   
