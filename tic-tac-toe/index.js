@@ -1,3 +1,5 @@
+console.log("Ваша отметка - 60 балла(ов)");
+
 const statusDisplay = document.querySelector('.game-status');
 
 let gameActive = true;
@@ -102,7 +104,7 @@ document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click'
 document.querySelector('.game-restart').addEventListener('click', handleRestartGame);
 // Clear top-10
 function clearWinners (){
-  if(gameWinners.children.length > 2){
+  if(gameWinners.children.length > 10){
   gameWinners.innerHTML = "";
   localStorage.clear();
   }

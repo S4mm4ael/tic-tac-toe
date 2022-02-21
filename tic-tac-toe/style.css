@@ -20,11 +20,13 @@
 }
 html {
   scroll-behavior: smooth;
+  
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: default;
 }
 body{
   display: flex;
@@ -39,16 +41,22 @@ body{
 }
 .container{
   padding: 20px;
-}
-.game-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 50px;
 }
+.game-container{
+  min-height: 400px;
+  padding-top: 20px;
+  border-bottom: 2px solid var(--color-gold);
+}
+a{
+  cursor: pointer;
+}
 td{
-  border: 3px solid var(--color-gold);
+  border: 5px solid var(--color-gold);
   height: 100px;
   width: 100px;
   text-align: center;
@@ -56,8 +64,27 @@ td{
   cursor: pointer;
   font-size: var(--font2);
   color: var(--color-white);
+  transition: 0.5s;
 }
-
+td:hover {
+  border: 5px solid var(--color-white);
+  color: var(--color-gold);
+}
+.winners-list {
+  margin-top: auto;
+  min-height: 50px;
+}
+.winners-list:hover {
+  transition: 0.5s;
+  color: var(--color-gold);
+}
+.status-container{
+  min-height: 200px;
+}
+.result-container{
+  flex-direction: row;
+  font-size: var(--font2);
+}
 table{
   border-collapse: collapse;
 }
@@ -93,18 +120,58 @@ table tr td:last-child{
   box-shadow: 0 0.5em 0.5em -0.4em #ffa260;
 	transform: translatey(-0.65em);
 }
-
 .game-status, .turn-number{
 font-size: var(--font2);
 }
 .winners{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  width: 300px;
+  height: 150px;
   justify-content: center;
-  
+  gap: 20px;
 }
-.winners-list-element{
+.result-container{
+  flex-direction: column;
+  height: 220px;
+}
 
+
+.footer-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-height: 100px;
+  padding: 20px;
+  background-color: var(--color-gold);
+}
+.social-list{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.footer-left{
+  display: flex;
+  gap: 20px;
+}
+.rss-link{
+  filter: invert();
+  transition: 0.3s;
+}
+.rss-logo{
+  height: 50px;
+  cursor: pointer;
+}
+.rss-link:hover, .rss-link:active{
+  filter: invert(26%)  saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+.social-logo{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.social-logo:hover, .social-logo:active{
+  filter: invert(26%)  saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
