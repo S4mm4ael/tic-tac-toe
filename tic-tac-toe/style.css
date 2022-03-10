@@ -17,7 +17,9 @@
   --font2: 32px;
   --font3: 20px;
   }
+
 }
+
 html {
   scroll-behavior: smooth;
   
@@ -36,7 +38,7 @@ body{
   font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 30px;
   color: var(--color-white);
 }
 .container{
@@ -48,12 +50,15 @@ body{
   gap: 50px;
 }
 .game-container{
-  min-height: 400px;
   padding-top: 20px;
   border-bottom: 2px solid var(--color-gold);
 }
 a{
   cursor: pointer;
+  font-size: var(--font3);
+  color: var(--color-white);
+  font-weight: 600;
+  text-decoration: none;
 }
 td{
   border: 5px solid var(--color-gold);
@@ -135,14 +140,12 @@ font-size: var(--font2);
   flex-direction: column;
   height: 220px;
 }
-
-
 .footer-container{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-height: 100px;
+  min-height: 100px;
   padding: 20px;
   background-color: var(--color-gold);
 }
@@ -175,3 +178,44 @@ font-size: var(--font2);
 .social-logo:hover, .social-logo:active{
   filter: invert(26%)  saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
+@media (max-width: 768px) {
+  .game-status, .turn-number{
+    font-size: var(--font3);
+  }
+  .container{
+    padding-top: 5px;
+    gap: 20px;
+  }
+  .status-container{
+    min-height: 130px;
+    font-size: var(--font2);
+    gap: 20px;
+  }
+  .winners-list{
+    margin: 0px;
+    font-size: var(--font2);
+  }
+  .winners{
+    font-size: var(--font3);
+    height: 30px;
+  }
+  .rss-logo{
+    height: 30px;
+    cursor: pointer;
+  }
+  .social-list{
+    gap: 5px;
+  }
+  .social-logo{
+    height: 30px;
+    width: 30px;
+
+  }
+  .footer-container{
+    flex-direction: column;
+  }
+  .result-container{
+    height: auto;
+    gap: 0px;
+  }
+  }
