@@ -23,6 +23,7 @@
 html {
   scroll-behavior: smooth;
   
+ 
 }
 * {
   margin: 0;
@@ -41,6 +42,11 @@ body{
   line-height: 30px;
   color: var(--color-white);
 }
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  
+}
 .container{
   padding: 20px;
   display: flex;
@@ -51,7 +57,6 @@ body{
 }
 .game-container{
   padding-top: 20px;
-  border-bottom: 2px solid var(--color-gold);
 }
 a{
   cursor: pointer;
@@ -77,14 +82,10 @@ td:hover {
 }
 .winners-list {
   margin-top: auto;
-  min-height: 50px;
 }
 .winners-list:hover {
   transition: 0.5s;
   color: var(--color-gold);
-}
-.status-container{
-  min-height: 200px;
 }
 .result-container{
   flex-direction: row;
@@ -125,9 +126,6 @@ table tr td:last-child{
   box-shadow: 0 0.5em 0.5em -0.4em #ffa260;
 	transform: translatey(-0.65em);
 }
-.game-status, .turn-number{
-font-size: var(--font2);
-}
 .winners{
   display: flex;
   flex-direction: row;
@@ -138,16 +136,15 @@ font-size: var(--font2);
 }
 .result-container{
   flex-direction: column;
-  height: 220px;
 }
 .footer-container{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  min-height: 100px;
-  padding: 20px;
+  height: fit-content;
   background-color: var(--color-gold);
+   
 }
 .social-list{
   list-style: none;
@@ -179,16 +176,7 @@ font-size: var(--font2);
   filter: invert(26%)  saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 @media (max-width: 768px) {
-  .game-status, .turn-number{
-    font-size: var(--font3);
-  }
   .container{
-    padding-top: 5px;
-    gap: 20px;
-  }
-  .status-container{
-    min-height: 130px;
-    font-size: var(--font2);
     gap: 20px;
   }
   .winners-list{
@@ -214,8 +202,5 @@ font-size: var(--font2);
   .footer-container{
     flex-direction: column;
   }
-  .result-container{
-    height: auto;
-    gap: 0px;
-  }
+ 
   }

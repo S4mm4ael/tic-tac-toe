@@ -1,13 +1,13 @@
 console.log("Ваша отметка - 60 балла(ов)");
 
-const statusDisplay = document.querySelector('.game-status');
-
 let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
 const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => `Game ended in a draw!`;
+const totalTurns = () => `Total turns number: ${turnNumberArr.map(i=>x+=i, x=0).reverse()[0]}`;
+
 
 let turnNumberArr = [0];
 const turnNumberBlock = document.querySelector('.turn-number');
@@ -28,6 +28,9 @@ const winningConditions = [
 function handleCellPlayed(clickedCell, clickedCellIndex) {
     gameState[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
+
+    //clickedCell.style.backgroundColor = "red";
+
     handleTurnNumber()
 }
 function handlePlayerChange() {
@@ -36,15 +39,14 @@ function handlePlayerChange() {
 function handleTurnNumber() {
   turnNumberArr.push(1);
 }
-function totalTurns(){
-  turnNumberBlock.innerHTML = `Total turns number: ${turnNumberArr.map(i=>x+=i, x=0).reverse()[0]}`
-}
+
 function addWinner(winner){
   let block = document.createElement("div");
   gameWinners.append(block);
   block.classList.add(".winners-list-element");
   block.innerHTML = winner;
   localStorage.setItem("gameWinners", gameWinners.innerHTML);
+  clearWinners ()
   return block
 }
 function handleResultValidation() {
@@ -58,26 +60,30 @@ function handleResultValidation() {
             continue;
         }
         if (a === b && b === c) {
+           
             roundWon = true;
             break
         }
     }
     if (roundWon) {
-        statusDisplay.innerHTML = winningMessage();
+        alert(winningMessage() + ` ` + totalTurns());
         gameActive = false;
-        totalTurns()
-        addWinner(currentPlayer)
+        clearWinners ()
+        totalTurns();
+        addWinner(currentPlayer);
         return;
     }
     let roundDraw = !gameState.includes("");
     if (roundDraw) {
-        statusDisplay.innerHTML = drawMessage();
+        alert(`It's a draw!` + ` ` + totalTurns());
         gameActive = false;
-        totalTurns()
-        addWinner('Draw')
+        clearWinners ()
+        totalTurns();
+        addWinner('Draw');
         return;
     }
     handlePlayerChange();
+    
 }
 function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
@@ -95,23 +101,21 @@ function handleRestartGame() {
     currentPlayer = "X";
     gameState = ["", "", "", "", "", "", "", "", ""];
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
-    turnNumberArr = [0]
-    statusDisplay.innerHTML = '';
-    turnNumberBlock.innerHTML = '';
-    clearWinners ()
+    turnNumberArr = [0];
+    clearWinners ();
 }
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.game-restart').addEventListener('click', handleRestartGame);
 // Clear top-10
 function clearWinners (){
-  if(gameWinners.children.length > 10){
-  gameWinners.innerHTML = "";
-  localStorage.clear();
+  if(gameWinners.children.length > 9){
+  gameWinners.removeChild(gameWinners.childNodes[0]);
+
   }
 }
 // Local storage 
 function getLocalStorage (){
   gameWinners.innerHTML = (localStorage.getItem("gameWinners"));
-  clearWinners ()
+  
 }
 window.addEventListener('load', getLocalStorage);
